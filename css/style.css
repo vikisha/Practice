@@ -1,0 +1,97 @@
+/*new font-face rule with a newly defined font-family named 'News Cycle'*/
+@font-face {
+    font-family: "news cycle";
+    src: url("fonts/news_cycle.ttf")format("truetype");
+}
+
+/*new font-face rule with a newly defined font-family named 'News Cycle'*/
+@font-face {
+    font-family: "contrail one";
+    src: url("fonts/contrail_one.tff")format("truetype");
+}
+/*these rules are only used when not in print view.
+body, header, h3 and article*/
+@media not print {
+body {
+    color: #635959;
+    font-family: "news cycle";
+}
+
+header {
+    background-color: #242323;
+    color: #EFEFEF;
+    padding: 20px 50px;
+    font-family: "contrail one";
+}
+
+/*targets the h3 element, targets h4 elements within an article element*/
+h3, article h4 {
+    color: #8c1018;
+}
+
+/*targets the a elements within an article element*/
+article a {
+    color: #314052;
+    }
+}
+
+/*targets the h1 elements within a header element*/
+header h1 {
+    font-size: 4em;
+}
+
+/*Targets the figcaption elements that are direct descendants of figure
+elements within a main element.*/
+main figure > figcaption {
+    font-size: 0.75em;
+    font-style: italic;
+}
+
+/*targets the figcaption elements that are direct descendants of
+figure elements within a main element. This rule will add content before
+the element using the special ::before selector in CSS*/
+main figure > figcaption::before {
+    content: 'Pictured above ';
+    font-weight: bold;
+}
+
+/*targets the time elements that are direct descendants of article elements*/
+article > time {
+    float: right;
+    font-size: 0.75em;
+    font-weight: lighter;
+}
+
+/*targets the h3 elements that are direct descendants of main elements
+these rules are only used when not in print view.*/
+@media not print {
+main > h3 {
+    font-size: 2em;
+    }
+}
+
+main {
+    padding: 5px 10px;
+}
+
+article {
+    margin: 5px 0px;
+    padding: 5px 5px;
+    box-shadow: -1px -1px 6px #888888;
+}
+
+/*new media query that applies when in print view*/
+@media print {
+    header {
+        padding: 0px;
+    }
+    article {
+        box-shadow: none;
+    }
+   header h1 {
+    font-size: 2em;
+    }
+    header h2 {
+        display: none;
+    }
+}
