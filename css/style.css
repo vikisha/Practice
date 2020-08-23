@@ -95,3 +95,38 @@ article {
         display: none;
     }
 }
+
+/*CSS rule set that targets the img elements that are direct descendants of figure
+elements that are direct descendants of the section element with an id of carousel.
+This rule will hide the figure elements by default.*/
+section#carousel > figure > img {
+    display: none;
+    margin: 0px auto;
+}
+
+/*CSS rule set that targets the img elements that are direct descendants of figure
+elements referencing the visible class that are direct descendants of the section
+element with an id of carousel.This rule will show only the figure elements that
+reference the class visible*/
+section#carousel > figure.visible > img {
+    display:block;
+    position: relative;
+    overflow: hidden;
+}
+
+/*CSS rule set that targets the figcaption elements that are direct descendants of
+figure elements that are direct descendants of the section element with an id of carousel
+This rule will hid the figcaption elements by default*/
+section#carousel > figure > figcaption {
+    display: none;
+}
+/*CSS rule set that targets the figcaption elements that are direct descendants of
+figure elements referencing the visible class that are direct descendants of the
+section element with an id of carousel. This rule will show only the figcaption elements
+that reference the class visible.*/
+section#carousel > figure.visible > figcaption {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
