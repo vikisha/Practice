@@ -1,15 +1,11 @@
-var slideInterval = 3500;
-
-/*New Function-retrieves all of the figure elements within the section element using the id of carousel.
-Returns the resulting array as the result of this function.*/
+const slideInterval = 3500;
 function getFigures() {
-    return document.getElementById('carousel').getElementByTagName('figure');
+    return document.getElementById('carousel').getElementsByTagName('figure');
 }
-
 function moveForward() {
-    var pointer;
-    var figures = getFigures();
-    for (var i = 0; i < figures.length; i++) {
+    let pointer;
+    let figures = getFigures();
+    for (let i = 0; i < figures.length; i++) {
         if (figures[i].className == 'visible') {
             figures[i].className = '';
             pointer = i;
